@@ -6,10 +6,14 @@ touching the core framework.
 
 How to use
 ===================
-In order to use our overlays, add:
+Both AOSCP and Google overlays are enabled by default. In order to exclude one or both, you should use:
 
-    include vendor/overlay/aoscp/configs/common.mk
+    TARGET_USES_AOSCP_OVERLAY := false
 
-at the end of vendor/aoscp/configs/common.mk.
+or
 
-This is included by default
+    TARGET_USES_GOOGLE_OVERLAY := false
+
+in your devices BoardConfig.mk, or export them before building with:
+
+    export TARGET_USES_AOSCP_OVERLAY=false
